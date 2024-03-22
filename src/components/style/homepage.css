@@ -1,0 +1,38 @@
+.home-page {
+    position:absolute;
+    display: flex; /* Add this line */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    top: 100px;
+  }
+h1 {
+    font-size: 50px;
+    text-align: center;
+    font-weight: 500;
+    font-family: inherit;
+    color: rgba(255, 255, 255);
+    margin: 20px 0;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; /* Add this line */
+}
+p {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    font-family: inherit;
+    color: rgba(255, 255, 255);
+    margin: 20px 0;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; /* Add this line */
+}
+
+.home-page-header {
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    display: block;
+    border-radius: 15px;
+}
+.home-page-body {
+    margin-top: 20px; /* Add this line */
+  }

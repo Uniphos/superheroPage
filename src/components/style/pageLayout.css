@@ -1,0 +1,6 @@
+.content {
+    display: flex;
+    justify-content: center; /* This will center the content horizontally */
+    align-items: center; /* This will center the content vertically */
+    flex-wrap: wrap; /* Add this line */
+  }
