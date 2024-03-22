@@ -20,7 +20,3 @@
   left: 0;
   background: rgba(128, 128, 128, 0.5);
 }
-
-.content {
-  /* No need for position: relative; and z-index: 2; */
-}

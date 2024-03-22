@@ -1,6 +1,7 @@
 import React from "react";
 import PageLayout from "../pageLayout";
 import HeroList from "../heroList";
+import '../style/homepage.css'
 
 const HomePage = () => {
     return (
