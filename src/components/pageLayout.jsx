@@ -1,10 +1,10 @@
 import React from "react";
-import navBar from "./navBar";
+import NavBar from "./navBar";
 
 const PageLayout = ({ children }) => {
     return (
         <div className="page-layout">
-        <navBar />
+        <NavBar />
         {children}
         </div>
     );

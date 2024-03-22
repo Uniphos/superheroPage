@@ -1,11 +1,17 @@
-body {
+.background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-image: url('https://wallpapers.com/images/hd/marvel-black-and-white-inavg8dwpk7gd2l3.jpg');
   background-repeat: repeat;
   background-attachment: fixed;
   background-size: cover;
+  z-index: -1;
 }
 
-body::after {
+.background::after {
   content: '';
   position: absolute;
   top: 0;
@@ -13,4 +19,8 @@ body::after {
   bottom: 0;
   left: 0;
   background: rgba(128, 128, 128, 0.5);
+}
+
+.content {
+  /* No need for position: relative; and z-index: 2; */
 }
