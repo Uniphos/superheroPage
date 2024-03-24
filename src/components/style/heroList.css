@@ -1,0 +1,36 @@
+.heroList {
+    display: flex;
+    flex-direction: column; /* Add this line */
+    align-items: center; /* This will center the children horizontally */
+    justify-content: flex-start; /* This will align the children to the top */
+    margin: auto;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 80%;
+    border-radius: 15px;
+  }
+
+img {
+    width: 25%;
+    height: 25%;
+}
+
+li {
+    list-style-type: none;
+    font-size: 4.5em;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* This will center the text horizontally */
+    justify-content: flex-start; /* This will align the text to the left */
+    margin-left: 70px;
+}
+
+.filters {
+    display: block;
+    gap: 20px;
+  }
+
+.filters input {
+    margin-right: 30px; /* Adjust as needed */
+  }
