@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const PUBLIC_KEY = import.meta.env.VITE_APP_PUBLIC_KEY;
 const PRIVATE_KEY = import.meta.env.VITE_APP_PRIVATE_KEY;
 import md5 from "md5";
@@ -39,22 +40,6 @@ const HeroList = () => {
           return url;
 
     }
-/*
-    const searchItems = searchValue => {
-        setSearchInput(searchValue);
-        if (searchValue !== "") {
-          const filteredData = Object.keys(list.data.results).filter((item) => 
-            Object.values(item)
-              .join("")
-              .toLowerCase()
-              .includes(searchValue.toLowerCase())
-          )
-          setFilteredResults(filteredData);
-        } else {
-          setFilteredResults(Object.keys(list.Data));
-        }
-      };
-*/
     useEffect(() => {
         const fetchItems = async () => {
             const theUrl = getUrl();
@@ -95,17 +80,18 @@ const HeroList = () => {
             <ul>
                 {console.log(list)}
                 {list && Object.entries(list.data.results).map(([chara]) => 
-                    <li key={list.data.results[chara].id}>
-                        <br></br>
-                        <img src={list.data.results[chara].thumbnail.path + '.' + list.data.results[chara].thumbnail.extension} alt={list.data.results[chara].name} />
-                        {list.data.results[chara].name} 
-                        <br></br>
-                        last updated: 
-                        
-                        {" "+list.data.results[chara].modified.slice(0,4)}
-                        <br></br>
+                    <Link to={`/character/${list.data.results[chara].id}`}>
+                      <li key={list.data.results[chara].id}>
+                          <br></br>
+                          <img src={list.data.results[chara].thumbnail.path + '.' + list.data.results[chara].thumbnail.extension} alt={list.data.results[chara].name} />
+                          {list.data.results[chara].name} 
+                          <br></br>
+                          last updated: 
 
-                    </li>
+                          {" "+list.data.results[chara].modified.slice(0,4)}
+                          <br></br>
+                      </li>
+                    </Link>
                 )
                 }
             </ul>

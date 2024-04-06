@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import HomePage from './components/pages/homePage'
 import './App.css'
+import { Routes, Route, Link } from 'react-router-dom'
+import HeroInfo from './components/pages/heroInfo'
+
 
 function App() {
 
@@ -8,7 +11,10 @@ function App() {
     <div className="App">
       <div className="background"></div>
       <div className="contant">
-        <HomePage />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/character/:id" element={<HeroInfo />} />        
+        </Routes>
       </div>
     </div>
   )
